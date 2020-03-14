@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sample</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <script src="http://pure.github.io/pure/libs/pure.js"></script>
+</head>
+
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="heading">
+                            <a data-toggle="collapse" data-target="#collapse" aria-expanded="true"
+                                aria-controls="collapse">
+                                <div class="row">
+                                    <div class="col-8 title">
+                                        Title
+                                    </div>
+                                    <div class="col-4 date">
+                                        Date
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="pics row">
+                                    <img src="" class="col-12"></img><br>
+                                </div>
+                                <div class="weather">
+                                    <i class="fas fa-cloud-sun fa-fw"></i> 氣候<br>
+                                </div>
+                                <hr>
+                                <div class="bug">
+                                    <i class="fas fa-bug fa-fw"></i> 蟲害<br>
+                                </div>
+                                <hr>
+                                <div class="job">
+                                    <i class="fas fa-fist-raised fa-fw"></i> 工作<br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var data = {
+            stages: [
+                {
+                    id: 'One',
+                    name: '秧苗期',
+                    date: '2020/1/5',
+                    pics: [
+                        "{{ url_for('static', filename='2.jpg') }}"
+                    ],
+                    weather: '18 - 19˚C 降雨機率70% 稍有寒意',
+                    bug: ' 近期監測本縣斜紋夜蛾密度達黃燈警戒標準，請農民啟動防治工作，以降低田間蟲害密度',
+                    job: '(1)捕殺幼蟲或摘除卵塊:田間如發現卵塊或幼蟲，應立即捕殺或移出田間。 <br> \
+                        (2)全期懸掛斜紋夜蛾性費洛蒙: 誘引斜紋夜蛾雄蛾，減少交尾繁殖後代，並藉以監測田間族群密度，族群密度提升應啟動防治工作。 <br> \
+                        (3)田區翻耕淹水: 受害嚴重之綠肥作物應盡速翻耕淹水，避免斜紋夜蛾滋生蔓延。 <br> \
+                        (4)化學藥劑防治: 請農友參閱防檢局農藥資訊服務網病蟲害防治(https://pesticide.baphiq.gov.tw/web/Insecticides_MenuItem5_5.aspx)，並注意安全採收期。'
+                },
+                {
+                    id: 'Two',
+                    name: '分蘗期',
+                    date: '2020/2/1',
+                    pics: [
+                        "{{ url_for('static', filename='3.jpg') }}"
+                    ],
+                    weather: '15 - 18˚C 降雨機率90% 寒冷至稍有寒意',
+                    bug: '洋蔥炭疽病已現蹤高雄場籲請農友注意防治',
+                    job: '作物種植前，進行田區淹水，以去除土壤中蟲蛹；藥劑防治幼蟲；吊掛性費洛蒙誘集雄成蟲，減少交尾數；若在田區看到蟲卵，應立即摘除，減少孳生源；防治藥劑種類可參考防檢局農藥資訊服務網。',
+                },
+                {
+                    id: 'Three',
+                    name: '幼穗分化期',
+                    date: '2020/2/6',
+                    pics: [
+                        "{{ url_for('static', filename='4.jpg') }}"
+                    ],
+                    weather: '15 - 18˚C 降雨機率90% 寒冷至稍有寒意',
+                    bug: '洋蔥炭疽病已現蹤高雄場籲請農友注意防治',
+                    job: '作物種植前，進行田區淹水，以去除土壤中蟲蛹；藥劑防治幼蟲；吊掛性費洛蒙誘集雄成蟲，減少交尾數；若在田區看到蟲卵，應立即摘除，減少孳生源；防治藥劑種類可參考防檢局農藥資訊服務網。',
+                },
+                {
+                    id: 'Four',
+                    name: '抽穗期',
+                    date: '2020/2/6',
+                    pics: [
+                        "{{ url_for('static', filename='5.jpg') }}"
+                    ],
+                    weather: '15 - 18˚C 降雨機率90% 寒冷至稍有寒意',
+                    bug: '洋蔥炭疽病已現蹤高雄場籲請農友注意防治',
+                    job: '作物種植前，進行田區淹水，以去除土壤中蟲蛹；藥劑防治幼蟲；吊掛性費洛蒙誘集雄成蟲，減少交尾數；若在田區看到蟲卵，應立即摘除，減少孳生源；防治藥劑種類可參考防檢局農藥資訊服務網。',
+                },
+                {
+                    id: 'Five',
+                    name: '成熟期',
+                    date: '2020/2/6',
+                    pics: [
+                        "{{ url_for('static', filename='6.jpg') }}"
+                    ],
+                    weather: '15 - 18˚C 降雨機率90% 寒冷至稍有寒意',
+                    bug: '洋蔥炭疽病已現蹤高雄場籲請農友注意防治',
+                    job: '作物種植前，進行田區淹水，以去除土壤中蟲蛹；藥劑防治幼蟲；吊掛性費洛蒙誘集雄成蟲，減少交尾數；若在田區看到蟲卵，應立即摘除，減少孳生源；防治藥劑種類可參考防檢局農藥資訊服務網。',
+                }
+            ]
+        }
+
+
+        var directive = {
+            'div.card': {
+                'stage<-stages': {
+                    '.card-header@id+': 'stage.id',
+                    '.title': 'stage.name',
+                    '.date': 'stage.date',
+                    '.card-header > a@aria-controls+': 'stage.id',
+                    '.card-header > a@data-target+': 'stage.id',
+                    '.collapse@id+': 'stage.id',
+                    '.collapse@aria-labelledby+': 'stage.id',
+                    'div.card-body > .pics > img': {
+                        'pic<-stage.pics': {
+                            '@src+': 'pic'
+                        }
+                    },
+                    'div.card-body > .weather+': 'stage.weather',
+                    'div.card-body > .bug+': 'stage.bug',
+                    'div.card-body > .job+': 'stage.job',
+                }
+            }
+        };
+
+        $p('.accordion').render(data, directive);
+
+    </script>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+    integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+
+</html>

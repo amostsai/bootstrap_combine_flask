@@ -18,4 +18,4 @@ def login():
     return render_template('login.html')
 
 # 在命令列執行以下指令
-# env FLASK_APP=flask_sample.py flask run
+# env FLASK_APP=flask_combine_bootstrap_sample.py flask run
